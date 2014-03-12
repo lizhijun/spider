@@ -2,7 +2,7 @@
 
 	header("Content-type: text/html; charset=utf-8");
 		
-	$url = file_get_contents("http://news.cnblogs.com/n/digg.aspx?startdate=2014/2/1");
+	$url = file_get_contents("http://news.cnblogs.com/n/digg.aspx?startdate=2014/3/10");
 
 
 	$preg = "#<div class=\"content\">
@@ -14,7 +14,7 @@
 
 	preg_match_all($preg,$url,$arr);
 
-	//var_dump($arr);
+	var_dump($arr);
 	
 	for($i=0;$i<count($arr[1]);$i++) {
 		
